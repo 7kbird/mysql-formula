@@ -11,6 +11,7 @@
 
 include:
   - mysql.server
+  - mysql.client
   - mysql.database
   - mysql.user
 {% if mysql_dev %}

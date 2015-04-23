@@ -38,6 +38,8 @@ include:
     - watch:
       - file: {{ state_id }}_schema
       - mysql_database: {{ state_id }}
+    - require:
+      - pkg: {{ mysql.client }}
 {% endif %}
 
 {% do db_states.append(state_id) %}

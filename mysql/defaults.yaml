@@ -93,17 +93,17 @@ Debian:
     append: |
       !includedir /etc/mysql/conf.d/
 CentOS:
-  server: mysql-server
-  client: mysql
-  service: mysqld
+  server: mariadb-server
+  client: mariadb
+  service: mariadb
   python: MySQL-python
-  dev: mysql-devel
+  dev: maria-devel
   config:
     file: /etc/my.cnf
     sections:
       mysqld_safe:
-        log_error: /var/log/mysqld.log
-        pid_file: /var/run/mysqld/mysqld.pid
+        log_error: /var/log/mariadb/error.log
+        pid_file: /var/run/mariadb/mariadb.pid
       mysqld:
         datadir: /var/lib/mysql
         socket: /var/lib/mysql/mysql.sock
