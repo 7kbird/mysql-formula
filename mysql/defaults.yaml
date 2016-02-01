@@ -288,4 +288,13 @@ FreeBSD:
         write_buffer: 2M
       mysqlhotcopy:
         interactive-timeout: noarg_present
+docker:
+  port: 3306
+  environment: []
+  image: 'mysql:latest'
+  users: {}
+  databases: {}
+  user: "root"
+  root_password: "changeplease"
+  docker_data_dir: '/var/lib/mysql'
 {% endload %}
